@@ -1,0 +1,34 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Source {
+  id        Int      @id @default(autoincrement())
+  name      String   @unique
+  baseUrl   String
+  rssUrl    String   @unique
+  createdAt DateTime @default(now())
+  posts     Post[]
+}
+
+model Post {
+  id          Int      @id @default(autoincrement())
+  title       String
+  slug        String   @unique
+  excerpt     String?
+  sourceUrl   String   @unique
+  imageUrl    String?
+  isVideo     Boolean  @default(false)
+  videoUrl    String?
+  category    String   @default("জাতীয়")
+  publishedAt DateTime @default(now())
+  createdAt   DateTime @default(now())
+
+  sourceId    Int
+  source      Source   @relation(fields: [sourceId], references: [id])
+}
