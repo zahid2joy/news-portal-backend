@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -17,11 +20,6 @@
     "node-cron": "^4.6.0",
     "prisma": "^5.22.0",
     "rss-parser": "^3.13.0"
-  },
-  "allowScripts": {
-    "esbuild@0.28.2": true,
-    "msgpackr-extract@3.0.4": true,
-    "workerd@1.20260704.1": true
   },
   "devDependencies": {}
 }
