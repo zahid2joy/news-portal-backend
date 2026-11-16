@@ -3,20 +3,19 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "start": "node index.js"
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
+    "@prisma/client": "^5.22.0",
     "axios": "^1.20.0",
     "cheerio": "^1.2.0",
     "cors": "^2.8.6",
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
     "node-cron": "^4.6.0",
+    "prisma": "^5.22.0",
     "rss-parser": "^3.13.0"
   },
   "allowScripts": {
@@ -24,8 +23,5 @@
     "msgpackr-extract@3.0.4": true,
     "workerd@1.20260704.1": true
   },
-  "devDependencies": {
-    "@prisma/client": "^5.22.0",
-    "prisma": "^5.22.0"
-  }
+  "devDependencies": {}
 }
